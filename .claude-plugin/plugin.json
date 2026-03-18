@@ -1,6 +1,6 @@
 {
   "name": "carlini-dm",
-  "description": "Decision-making framework based on Nicholas Carlini's research methodology. Evaluate ideas, projects, and priorities across 7 dimensions: impact, uniqueness, comparative advantage, de-risking, kill signals, timing, and effort-to-impact ratio.",
+  "description": "Decision-making framework based on Nicholas Carlini's research methodology. Evaluate and rank ideas, projects, and priorities across 10 dimensions: impact, uniqueness, comparative advantage, knowledge, de-risking, collaboration, timing, focus, communication, and kill/persist.",
   "version": "1.0.0",
   "author": {
     "name": "moralespanitz"
