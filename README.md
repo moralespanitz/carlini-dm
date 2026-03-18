@@ -1,24 +1,35 @@
 # carlini-dm
 
-A Claude Code skill that turns Nicholas Carlini's research decision-making methodology into a structured framework you can invoke anytime you're deciding what to work on, whether to kill a project, or how to prioritize competing ideas.
+A Claude Code skill that turns Nicholas Carlini's research decision-making methodology into a structured framework you can invoke anytime you need to decide what to work on.
+
+Bring one idea or ten. The framework scores each across ten dimensions, eliminates the losers, deep-dives the survivors, and delivers a ranked recommendation with concrete next actions.
+
+Works for research, startups, engineering, product decisions, and general prioritization.
 
 ## How it works
 
-You invoke `/carlini-dm`, describe what you're deciding, and Claude walks you through seven dimensions — one question at a time. Not a checklist to justify work you've already decided to do. A framework that forces honest answers.
+You invoke `/carlini-dm` and describe what you're deciding — a single idea, a list of competing options, or an active project you're not sure about.
 
-At the end you get a one-sentence verdict and one concrete next action.
+**For multiple options:** Claude scores each option across all 10 dimensions in a quick elimination round, cuts the bottom half, then deep-dives the top 2-3 survivors before delivering a ranked recommendation.
 
-It works for research, engineering, product decisions, and general prioritization — the framework is domain-agnostic.
+**For a single idea or active project:** Claude walks through each dimension one at a time and delivers a verdict: Continue, Kill, Pivot, De-risk first, or Practice (craft work).
 
-## The Seven Dimensions
+Either way, you get a direct recommendation and one concrete next action per option.
 
-1. **Impact** — If this succeeds, what specifically changes? Who cares, and why now?
-2. **Uniqueness** — What makes this something only you can do right now?
-3. **Comparative advantage** — Does this play to your specific strengths?
-4. **De-risking** — Have you tested the riskiest assumption first — or the easiest parts?
-5. **Kill / Pivot signals** — Should you kill, pivot, or double down?
-6. **Timing** — Is the world ready? Is the window opening or closing?
-7. **Effort-to-impact ratio** — Is this the maximal version, or are you over/under-investing?
+## The Ten Dimensions
+
+| # | Dimension | What it filters |
+|---|-----------|----------------|
+| 1 | **Impact** | Does it matter if this succeeds? |
+| 2 | **Uniqueness** | Can only you do this, right now? |
+| 3 | **Comparative Advantage** | Does this play to your specific strengths? |
+| 4 | **Knowledge & Independence** | Do you understand the landscape AND think independently? |
+| 5 | **De-risking** | Have you tested the hard part first? |
+| 6 | **Collaboration Leverage** | Do you have the right team? |
+| 7 | **Timing** | Is the window open? |
+| 8 | **Focus** | Can you state this in one sentence? |
+| 9 | **Communication Potential** | Can this be explained compellingly? |
+| 10 | **Kill / Persist** | Should you stop, continue, or double down? |
 
 > "One excellent paper is worth a thousand mediocre ones, and takes less time to write." — Carlini
 
@@ -44,21 +55,26 @@ ln -s $(pwd)/carlini-dm/.claude/skills/carlini-dm ~/.claude/skills/carlini-dm
 /carlini-dm
 ```
 
-Describe what you're deciding. Claude asks one question per dimension, then delivers a direct recommendation.
+Then describe what you're deciding. Examples:
+
+- "I have 5 startup ideas and need to pick one"
+- "Should I keep working on this project or kill it?"
+- "Help me prioritize these 3 research directions"
+- "Is this feature worth building?"
 
 ## The Source
 
-This skill is a direct adaptation of Nicholas Carlini's article:
+Adapted from Nicholas Carlini's article:
 
-**[How to win a best paper award (or, an opinionated take on how to do important research that matters)](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html)** — published 2026-03-09.
+**[How to win a best paper award (or, an opinionated take on how to do important research that matters)](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html)** — 2026-03-09
 
 ![Carlini's article](assets/preview.png)
 
-The article covers coming up with good research ideas, executing them well, writing them up clearly, and navigating what happens afterwards. The framework in this skill is drawn from the first two sections — idea selection and project management — and adapted for use beyond academic research.
+The article covers coming up with good research ideas, executing them well, writing them up clearly, and navigating what happens afterwards. This skill distills the decision-making principles from all four sections into a scoring framework that works beyond academic research.
 
 ## Who is Nicholas Carlini?
 
-Nicholas Carlini is a researcher working at the intersection of machine learning and computer security, currently at Anthropic studying what bad things you could do with, or do to, language models. Previously a research scientist at Google Brain (2018–2023) and DeepMind (2023–2025). He holds a Ph.D. from UC Berkeley under David Wagner.
+Nicholas Carlini is a researcher at the intersection of machine learning and computer security, currently at Anthropic. Previously a research scientist at Google Brain (2018–2023) and DeepMind (2023–2025). Ph.D. from UC Berkeley under David Wagner.
 
 His papers have received best paper awards at IEEE S&P, USENIX Security (twice), and ICML (three times), and have been covered by the New York Times, the BBC, Nature, Science, Wired, and Popular Science.
 
@@ -70,6 +86,7 @@ More at [nicholas.carlini.com](https://nicholas.carlini.com).
 - **Kill fast** — sunk cost is the enemy of impact
 - **De-risk first** — test the riskiest assumption before the easiest parts
 - **Focus on the distribution** — the outcome is a sample; control what you can control
+- **Ideas are cheap** — share freely, execute ruthlessly, collaborate widely
 
 ## License
 
