@@ -1,5 +1,7 @@
 # carlini-dm
 
+![Carlini's article](assets/preview.png)
+
 A Claude Code skill that turns Nicholas Carlini's research decision-making methodology into a structured framework you can invoke anytime you need to decide what to work on.
 
 Bring one idea or ten. The framework scores each across ten dimensions, eliminates the losers, deep-dives the survivors, and delivers a ranked recommendation with concrete next actions.
@@ -67,8 +69,6 @@ Then describe what you're deciding. Examples:
 Adapted from Nicholas Carlini's article:
 
 **[How to win a best paper award (or, an opinionated take on how to do important research that matters)](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html)** — 2026-03-09
-
-![Carlini's article](assets/preview.png)
 
 The article covers coming up with good research ideas, executing them well, writing them up clearly, and navigating what happens afterwards. This skill distills the decision-making principles from all four sections into a scoring framework that works beyond academic research.
 
